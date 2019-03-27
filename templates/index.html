@@ -1,0 +1,279 @@
+<html lang="es">
+<head>
+    <title>Random Generators API</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div>
+    <h1>Random Generators API</h1>
+    <div>
+        <h2>Mid Squares</h2>
+        <h3>Random Generated numbers</h3>
+        <div>
+            <h4>/generated/midSquares</h4>
+            <p><a href="https://mononucleo-rands-gen.herokuapp.com/generated/midSquares?seed=8&reps=10">Example</a></p>
+            <h5>Parameters</h5>
+            <ul>
+                <li>seed : The initial seed for the algorithm</li>
+                <li>reps : The number of desired random numbers </li>
+            </ul>
+            <h5>Response</h5>
+            <ul>
+                <li>Seed : The seeds array</li>
+                <li>Generator : The square of the seed divided in 3 parts in the form xx|xxxx|xx array</li>
+                <li>Generated : The generated number array</li>
+                <li>Randoms : The generated number between 0 and 1 array</li>
+            </ul>
+        </div>
+        <h3>Random Generated numbers with goodness tests</h3>
+        <div>
+            <h4>/goodness/midSquares</h4>
+            <p><a href="https://mononucleo-rands-gen.herokuapp.com/goodness/midSquares?seed=8&reps=10&acceptance=0.2">Example</a></p>
+            <h5>Parameters</h5>
+            <ul>
+                <li>seed : The initial seed for the algorithm</li>
+                <li>reps : The number of desired random numbers </li>
+                <li>acceptance : The percentage of acceptance of the goodness tests in a scale from 0 to 1</li>
+            </ul>
+            <h5>Response</h5>
+            <ul>
+                <li>
+                    Randoms:
+                    <ul>
+                        <li>Seed : The seeds array</li>
+                        <li>Generator : The square of the seed divided in 3 parts in the form xx|xxxx|xx array</li>
+                        <li>Generated : The generated number array</li>
+                        <li>Randoms : The generated number between 0 and 1 array</li>
+                    </ul>
+                </li>
+                <li>
+                    Goodness:
+                    <ul>
+                        <li>
+                            ChiSquare
+                            <ul>
+                                <li>Chi ^2 calculated : The result of the ChiSquare Algorithm</li>
+                                <li>Chi ^2 Theoretical : The result in the Chi Square Tables for the acceptance given</li>
+                                <li>Accepted : True | False if the set of random numbers is under ChiSquare</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Kolmogorov
+                            <ul>
+                                <li>Kolmogorov Distance : The result of the Kolmogorov Algorithm</li>
+                                <li>Theory Distance : The result in the Kolmogorov Tables for the acceptance given</li>
+                                <li>Accepted : True | False if the set of random numbers is under Kolmogorov</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <h2>Linear Congruential</h2>
+        <h3>Random Generated numbers</h3>
+        <div>
+            <h4>/generated/linearCongruential</h4>
+            <p><a href="https://mononucleo-rands-gen.herokuapp.com/generated/linearCongruential?seed=13&&mult=7&inc=13&mod=17&reps=10">Example</a></p>
+            <h5>Parameters</h5>
+            <ul>
+                <li>seed : The initial seed for the algorithm</li>
+                <li>mult : The multiplier for the algorithm</li>
+                <li>inc : The increment for the algorithm</li>
+                <li>mod : The module of the algorithm</li>
+                <li>reps: The number of desired random numbers</li>
+            </ul>
+            <h5>Response</h5>
+            <ul>
+                <li>Seed : the seeds array</li>
+                <li>Generated : the generated number array</li>
+                <li>Randoms : the generated number between 0 and 1 array</li>
+            </ul>
+        </div>
+        <h3>Random Generated numbers with goodness tests</h3>
+        <div>
+            <h4>/goodness/linearCongruential</h4>
+            <p><a href="https://mononucleo-rands-gen.herokuapp.com/goodness/linearCongruential?seed=13&&mult=7&inc=13&mod=17&reps=10&acceptance=0.2">Example</a></p>
+            <h5>Parameters</h5>
+            <ul>
+                <li>seed : The initial seed for the algorithm</li>
+                <li>mult : The multiplier for the algorithm</li>
+                <li>inc : The increment for the algorithm</li>
+                <li>mod : The module of the algorithm</li>
+                <li>reps: The number of desired random numbers</li>
+                <li>acceptance : The percentage of acceptance of the goodness tests in a scale from 0 to 1</li>
+            </ul>
+            <h5>Response</h5>
+            <ul>
+                <li>
+                    Randoms:
+                    <ul>
+                        <li>Seed : The seeds array</li>
+                        <li>Generated : The generated number array</li>
+                        <li>Randoms : The generated number between 0 and 1 array</li>
+                    </ul>
+                </li>
+                <li>
+                    Goodness:
+                    <ul>
+                        <li>
+                            ChiSquare
+                            <ul>
+                                <li>Chi ^2 calculated : The result of the ChiSquare Algorithm</li>
+                                <li>Chi ^2 Theoretical : The result in the Chi Square Tables for the acceptance given</li>
+                                <li>Accepted : True | False if the set of random numbers is under ChiSquare</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Kolmogorov
+                            <ul>
+                                <li>Kolmogorov Distance : The result of the Kolmogorov Algorithm</li>
+                                <li>Theory Distance : The result in the Kolmogorov Tables for the acceptance given</li>
+                                <li>Accepted : True | False if the set of random numbers is under Kolmogorov</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <h2>Mixed Congruential</h2>
+        <h3>Random Generated numbers</h3>
+        <div>
+            <h4>/generated/mixedCongruential</h4>
+            <p><a href="https://mononucleo-rands-gen.herokuapp.com/generated/mixedCongruential?seed=13&&mult=7&inc=13&mod=17&reps=10">Example</a></p>
+            <h5>Parameters</h5>
+            <ul>
+                <li>seed : The initial seed for the algorithm</li>
+                <li>mult : The multiplier for the algorithm</li>
+                <li>inc : The increment for the algorithm</li>
+                <li>mod : The module of the algorithm</li>
+                <li>reps : The number of desired random numbers</li>
+            </ul>
+            <h5>Response</h5>
+            <ul>
+                <li>Seed : the seeds array</li>
+                <li>Generated : the generated number array</li>
+                <li>Randoms : the generated number between 0 and 1 array</li>
+            </ul>
+        </div>
+        <h3>Random Generated numbers with goodness tests</h3>
+        <div>
+            <h4>/goodness/mixedCongruential</h4>
+            <p><a href="https://mononucleo-rands-gen.herokuapp.com/goodness/mixedCongruential?seed=13&&mult=7&inc=13&mod=17&reps=10&acceptance=0.2">Example</a></p>
+            <h5>Parameters</h5>
+            <ul>
+                <li>seed : The initial seed for the algorithm</li>
+                <li>mult : The multiplier for the algorithm</li>
+                <li>inc : The increment for the algorithm</li>
+                <li>mod : The module of the algorithm</li>
+                <li>reps : The number of desired random numbers</li>
+                <li>acceptance : The percentage of acceptance of the goodness tests in a scale from 0 to 1</li>
+            </ul>
+            <h5>Response</h5>
+            <ul>
+                <li>
+                    Randoms:
+                    <ul>
+                        <li>Seed : The seeds array</li>
+                        <li>Generated : The generated number array</li>
+                        <li>Randoms : The generated number between 0 and 1 array</li>
+                    </ul>
+                </li>
+                <li>
+                    Goodness:
+                    <ul>
+                        <li>
+                            ChiSquare
+                            <ul>
+                                <li>Chi ^2 calculated : The result of the ChiSquare Algorithm</li>
+                                <li>Chi ^2 Theoretical : The result in the Chi Square Tables for the acceptance given</li>
+                                <li>Accepted : True | False if the set of random numbers is under ChiSquare</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Kolmogorov
+                            <ul>
+                                <li>Kolmogorov Distance : The result of the Kolmogorov Algorithm</li>
+                                <li>Theory Distance : The result in the Kolmogorov Tables for the acceptance given</li>
+                                <li>Accepted : True | False if the set of random numbers is under Kolmogorov</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <h2>Multiplicative Congruential</h2>
+        <h3>Random Generated numbers</h3>
+        <div>
+            <h4>/generated/multCongruential</h4>
+            <p><a href="https://mononucleo-rands-gen.herokuapp.com/generated/multCongruential?seed=13&&mult=7&mod=17&reps=10">Example</a></p>
+            <h5>Parameters</h5>
+            <ul>
+                <li>seed : The initial seed for the algorithm</li>
+                <li>mult : The multiplier for the algorithm</li>
+                <li>mod : The module of the algorithm</li>
+                <li>reps : The number of desired random numbers</li>
+            </ul>
+            <ul>
+                <li>Seed : the seeds array</li>
+                <li>Generated : the generated number array</li>
+                <li>Randoms : the generated number between 0 and 1 array</li>
+            </ul>
+        </div>
+        <h3>Random Generated numbers with goodness tests</h3>
+        <div>
+            <h4>/goodness/multCongruential</h4>
+            <p><a href="https://mononucleo-rands-gen.herokuapp.com/goodness/multCongruential?seed=13&&mult=7&mod=17&reps=10&acceptance=0.2">Example</a></p>
+            <h5>Parameters</h5>
+            <ul>
+                <li>seed : The initial seed for the algorithm</li>
+                <li>mult : The multiplier for the algorithm</li>
+                <li>mod : The module of the algorithm</li>
+                <li>reps : The number of desired random numbers</li>
+                <li>acceptance : The percentage of acceptance of the goodness tests in a scale from 0 to 1</li>
+            </ul>
+            <h5>Response</h5>
+            <ul>
+                <li>
+                    Randoms:
+                    <ul>
+                        <li>Seed : The seeds array</li>
+                        <li>Generated : The generated number array</li>
+                        <li>Randoms : The generated number between 0 and 1 array</li>
+                    </ul>
+                </li>
+                <li>
+                    Goodness:
+                    <ul>
+                        <li>
+                            ChiSquare
+                            <ul>
+                                <li>Chi ^2 calculated : The result of the ChiSquare Algorithm</li>
+                                <li>Chi ^2 Theoretical : The result in the Chi Square Tables for the acceptance given</li>
+                                <li>Accepted : True | False if the set of random numbers is under ChiSquare</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Kolmogorov
+                            <ul>
+                                <li>Kolmogorov Distance : The result of the Kolmogorov Algorithm</li>
+                                <li>Theory Distance : The result in the Kolmogorov Tables for the acceptance given</li>
+                                <li>Accepted : True | False if the set of random numbers is under Kolmogorov</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+<footer>
+    <div align="center">The Charles Martínez and Associates Ltd. Co. | &copy; 2019</div>
+</footer>
+</html>
